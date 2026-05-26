@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+Package.resolved
+
+# Secrets — never commit real API keys
+Echelon/Config/APIKeys.swift

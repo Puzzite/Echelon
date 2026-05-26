@@ -1,0 +1,15 @@
+//
+//  APIKeys.swift.example
+//  Echelon
+//
+//  Template for APIKeys.swift. Copy this file to APIKeys.swift
+//  (same directory) and fill in your real keys.
+//
+//  APIKeys.swift is gitignored and must NEVER be committed.
+//
+
+import Foundation
+
+enum APIKeys {
+    static let rawg = "YOUR_RAWG_API_KEY_HERE"
+}
