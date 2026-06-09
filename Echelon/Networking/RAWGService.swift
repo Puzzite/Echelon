@@ -61,6 +61,8 @@ enum RAWGService {
         components?.queryItems = [
             URLQueryItem(name: "key", value: APIKeys.rawg),
             URLQueryItem(name: "search", value: query),
+            URLQueryItem(name: "search_precise", value: "true"),
+            URLQueryItem(name: "ordering", value: "-added"),
             URLQueryItem(name: "page_size", value: "20")
         ]
 

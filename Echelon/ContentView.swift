@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Root of the app. For now it's just Search; this becomes a
+    // TabView (Search / Feed / Profile) once those screens exist.
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        SearchView()
     }
 }
 
