@@ -77,7 +77,7 @@ struct GameDetailView: View {
     @ViewBuilder
     private var ratingsRow: some View {
         if game.rating != nil || game.metacritic != nil {
-            HStack(spacing: 36) {
+            HStack(spacing: 24) {
                 if let rating = game.rating {
                     VStack(spacing: 2) {
                         Text(rating, format: .number.precision(.fractionLength(1)))
@@ -91,7 +91,8 @@ struct GameDetailView: View {
                 if let metacritic = game.metacritic {
                     VStack(spacing: 2) {
                         Text("\(metacritic)")
-                            .font(.title3.bold())
+                            .font(.title3.weight(.semibold))
+                            .foregroundStyle(MetacriticStyle.color(for: metacritic))
                         Text("Metacritic")
                             .font(.caption)
                             .foregroundStyle(.secondary)

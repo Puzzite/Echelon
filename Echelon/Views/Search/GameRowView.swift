@@ -33,7 +33,7 @@ struct GameRowView: View {
             if let metacritic = game.metacritic {
                 Text("\(metacritic)")
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(metacriticColor(metacritic))
+                    .foregroundStyle(MetacriticStyle.color(for: metacritic))
             }
         }
         .padding(.vertical, 4)
@@ -69,14 +69,6 @@ struct GameRowView: View {
     private var releaseYear: String? {
         guard let released = game.released, released.count >= 4 else { return nil }
         return String(released.prefix(4))
-    }
-
-    private func metacriticColor(_ score: Int) -> Color {
-        switch score {
-        case 75...: return .green
-        case 50..<75: return .yellow
-        default: return .red
-        }
     }
 }
 
