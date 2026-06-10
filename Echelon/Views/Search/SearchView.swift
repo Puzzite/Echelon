@@ -15,12 +15,9 @@ struct SearchView: View {
     var body: some View {
         NavigationStack {
             content
-                .navigationTitle("Search")
+                .navigationTitle("Echelon")
                 .navigationDestination(for: Game.self) { game in
-                    // Placeholder destination — GameDetailView replaces
-                    // this in the next step.
-                    Text(game.name)
-                        .navigationTitle(game.name)
+                    GameDetailView(game: game)
                 }
         }
         .searchable(text: $viewModel.searchQuery, prompt: "Search for a game")
@@ -55,6 +52,7 @@ struct SearchView: View {
                 }
             }
             .listStyle(.plain)
+            .scrollDismissesKeyboard(.immediately)
         }
     }
 }
